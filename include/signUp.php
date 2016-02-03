@@ -5,6 +5,7 @@
 		$password = $_POST['password'];
 		$name = $_POST['name'];
 		$email = $_POST['email'];
+		$nationality = $_POST['nationality'];
 
 		require_once("./include/db_connect.php");
 		$db_link = db_connect("majorgroupproject");
@@ -35,30 +36,31 @@
 		}
 		else
 		{
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-		$name = $_POST['name'];
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+			$name = $_POST['name'];
+			$nationality = $_POST['nationality'];
 
-		require_once("include/db_connect.php");
-		$db_link = db_connect("majorgroupproject");
+			require_once("include/db_connect.php");
+			$db_link = db_connect("majorgroupproject");
 
-		$amount = @mysql_query("Select *
-		From users");
-		$ID = mysql_num_rows($amount);
-		$ID = $ID+1;
+			$amount = @mysql_query("Select *
+			From users");
+			$ID = mysql_num_rows($amount);
+			$ID = $ID+1;
 
-		$query = "INSERT INTO users VALUES ('".$ID."','".$name."','".$username."','".$password."','".NULL."','".NULL."','".NULL."','".$email."')";
-		$result = mysql_query($query) or die("SQL query failed");
-		echo "$ID";
-		mysql_close($db_link);
+			$query = "INSERT INTO users VALUES ('".$ID."','".$name."','".$username."','".$password."','".NULL."','".NULL."','".NULL."','".$email."','".$nationality."')";
+			$result = mysql_query($query) or die("SQL query failed");
+			echo "$ID";
+			mysql_close($db_link);
 
-		$_SESSION["password"]=$password;
+			$_SESSION["password"]=$password;
 
-		echo "$username is not in the database";
-		echo "$username is not in the database and will be added now hello and welcome to our first ever app $username";
-		$inDatabase='false';
-		$_SESSION["username"]=$username;
-		header('Location: userHome.php');
+			echo "$username is not in the database";
+			echo "$username is not in the database and will be added now hello and welcome to our first ever app $username";
+			$inDatabase='false';
+			$_SESSION["username"]=$username;
+			header('Location: userHome.php');
 		}
 
 	}

@@ -1,0 +1,37 @@
+<?php
+if(isset($_POST['username']))
+{
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	require_once("include/db_connect.php");
+	$db_link = db_connect("majorgroupproject");
+	$self = $_SERVER['PHP_SELF'];
+
+	$result = @mysql_query("Select *
+	From users
+	WHERE username LIKE '$username'
+	AND password LIKE '$password'");
+
+	$fields = mysql_list_fields("majorgroupproject","users");
+	$num_cols = mysql_num_fields($fields);
+	$inDatabase='false';
+	if(mysql_num_rows($result)>0)
+	{
+		while($row = mysql_fetch_array($result))
+			$inDatabase='true';
+		{
+			echo "<div id='move down' style='margin-top: 60px;'><span style='color:red;'>Hello ".$row['username'].". Make sure you log out after you are done!!</span></div><br>";
+			if($inDatabase=='true')
+			{
+				$_SESSION["username"]=$username;
+				$_SESSION["password"]=$password;
+				header('Location: userHome.php');
+			}
+		}
+	}
+	else{
+	echo "<span style='color:red;'>Sorry the username or the password is wrong!!</span><br>";
+	$inDatabase='false';
+	}
+}
+?>

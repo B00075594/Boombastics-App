@@ -71,6 +71,14 @@
 		<label for="email">Email</label>
 		<input type="email" name="email" id="email" required>
 		<br>
+		<label for="nationality">Nationality</label>
+		<select id="nationality">
+			<option value="english">English</option>
+			<option value="german">German</option>
+			<option value="french">French</option>
+			<option value="spanish">Spanish</option>
+		</select>
+		<br>
 		<div id="space">
 			<input type="submit" value="Submit">
 			<input type="reset" value="Reset">

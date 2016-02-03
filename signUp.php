@@ -66,10 +66,18 @@
 		<input type="user" name="username" id="username" required>
 		<br>
 		<label for="password">Password</label>
-		<input type="password" name="password">
+		<input type="password" name="password" required>
 		<br>
 		<label for="email">Email</label>
 		<input type="email" name="email" id="email" required>
+		<br>
+		<label for="nationality">Nationality</label>
+		<select name="nationality" required>
+			<option value="english">English</option>
+			<option value="german">German</option>
+			<option value="french">French</option>
+			<option value="spanish">Spanish</option>
+		</select>
 		<br>
 		<div id="space">
 			<input type="submit" value="Submit">

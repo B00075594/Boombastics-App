@@ -53,7 +53,7 @@
 <center style="margin-top: 90px;">
 
 	<h1>Reset your account here:</h1>
-	<?php include 'include/signUp.php';?>
+	<?php include 'include/accountReset.php';?>
 
 	<form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
 		<label for="email">Email</label>
@@ -63,7 +63,7 @@
 		<input type="password" name="password">
 		<br>
 		<label for="password">Confirm Password</label>
-		<input type="password" name="password">
+		<input type="password" name="newpassword">
 		<br>
 		<div id="space">
 			<input type="submit" value="Submit">

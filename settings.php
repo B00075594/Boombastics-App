@@ -61,8 +61,9 @@
 <input type="button" onclick="window.location.href='email.php';" class="btn btn-default" value="Change Email">
 <br>
 <input type="button" onclick="window.location.href='username.php';" class="btn btn-default" value="Change Username">
+<input type="button" onclick="window.location.href='lang.php';" class="btn btn-default" value="Change Languages">
+<br>
 <input type="button" onclick="window.location.href='userHome.php';" class="btn btn-default" value="Main Menu">
-
 </center>
 </body>
 </html>

@@ -1,9 +1,10 @@
 <?php session_start();?>
+<?php include 'header.php';?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Logout</title>
+	<title>Change Password</title>
 
 	<link rel="icon" type="image/ico" href="images/icon.png">
 	<style> @import "css/bootstrap.css";</style>
@@ -12,7 +13,6 @@
 	<script src="javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
-
 </head>
 <body>
 
@@ -36,13 +36,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a href="signUp.php">Sign up</a>
+                        <a href="logout.php">Log Out</a>
                     </li>
                     <li>
-                        <a href="aboutNOTLOGIN.php">About</a>
+					    <a href="userHome.php">Home</a>
                     </li>
                     <li>
-                        <a href="contactNOTLOGIN.php">Contact</a>
+                        <a href="about.php">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -51,14 +54,24 @@
         <!-- /.container-fluid -->
     </nav>
 
-<?php require_once 'include/speakLogOut.php';?>
+<center style="margin-top: 90px;">
+<h1>Change Language</h1>
+<?php include 'include/lang.php';?>
 
-<center>
-	<img src="images/imageedit_3_7887026764.png" id="user-default">
-
+<form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
+	<select name="nationality">
+		<option value="english">English</option>
+		<option value="german">German</option>
+		<option value="french">French</option>
+		<option value="spanish">Spanish</option>
+	</select>
 	<br>
-	<p>You have been sucessfully logged out. Click <a href="index.php">here</a> to go back to the home screen.</p>
+	<div id="space">
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</div>
+</form>
+<p>Click <a href="settings.php">here</a> to go back to settings</p>
 </center>
-
 </body>
 </html>

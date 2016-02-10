@@ -21,15 +21,17 @@
 			echo $speak;
 			if($speak=="english")
 			{
-				echo "<audio controls autoplay src = '../media/langs/english/hello.mp3' hidden='true'></audio>";
+				echo "<audio controls autoplay src = '../media/langs/english/bye.mp3' hidden='true'></audio>";
+				session_destroy();
 			}
 			if($speak=="spanish")
 			{
-				echo "<audio controls autoplay src = '../media/langs/spanish/hola.mp3' hidden='true'></audio>";
+				echo "<audio controls autoplay src = '../media/langs/spanish/adios.mp3' hidden='true'></audio>";
+				session_destroy();
 			}
 			else
 			{
-				echo "<audio controls autoplay src = '../media/langs/english/hello.mp3' hidden='true'></audio>";
+				echo "<audio controls autoplay src = '../media/langs/english/bye.mp3' hidden='true'></audio>";
 			}
 		}
 	}

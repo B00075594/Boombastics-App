@@ -19,6 +19,14 @@ if (isset($_POST['submit'])){
       }
   }
 }
+if($rightAnswer==10)
+{
+	echo "<audio controls autoplay src = '../media/langs/english/hello.mp3' hidden='true'></audio>";
+}
+if($wrongAnswer!=0)
+{
+	echo "<audio controls autoplay src = '../media/langs/english/bye.mp3' hidden='true'></audio>";
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -124,6 +132,8 @@ if (isset($_POST['submit'])){
 	<input type="reset" name="reset" class="btn btn-primary" value="Reset Quiz" onclick="test();" />
 	<br>
 	<a href="#">Back to Top</a>
+	<br>
+	<a href="../quiz.php">Back to Quiz Menu</a>
 	</div>
 	<br>
 	<br>

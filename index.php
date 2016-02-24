@@ -54,7 +54,7 @@
 
 <center>
 	<div class="container">
-		<img src="images/icon.png" id="user-default">
+		<img src="images/icon.png" class="img-responsive" id="user-default" width="200px">
 
 		<br>
 		<?php include 'header.php';?>
@@ -62,12 +62,12 @@
 		<form action="<?php echo($_SERVER['PHP_SELF']); ?>" role="form-group" method="POST">
 			<div class="form-group">
 				<label for="user">Username</label>
-				<input type="user" class="form-control" name="username" autofocus="">
+				<input type="user" class="form-control" name="username" autofocus="" placeholder="Enter Name">
 			</div>
 			<br>
 			<div class="form-group">
 				<label for="password">Password</label>
-				<input type="password" class="form-control" name="password">
+				<input type="password" class="form-control" name="password" placeholder="Enter Password">
 			</div>
 			<br>
 			<div id="space">

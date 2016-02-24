@@ -35,22 +35,14 @@ if($wrongAnswer!=0)
 	<title>Quiz</title>
 
 	<link rel="icon" type="image/ico" href="../images/icon.png">
-	<!--<style> @import "../css/bootstrap.css";</style>
+	<style> @import "../css/bootstrap.css";</style>
 	<style> @import "../css/bootstrap.min.css";</style>
 	<script src="../javaScript/jquery.js" type="text/javascript"></script>
 	<script src="../javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="../javaScript/bootstrap.min.js" type="text/javascript"></script>
-	-->
-
-	<!-- New files testing with questions layout -->
-
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<link rel="stylesheet" href="../css/questionsstyle.css">
-
-	<!-- :D  -->
-
+	<style> @import "../css/questionsstyle.css";</style>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script>
 		function test(){
 			window.location.replace("level1.php");
@@ -115,55 +107,26 @@ if($wrongAnswer!=0)
 
 <!--Display form-->
 <form action="level1.php" method="post" id="questionscontainer">
-	<fieldset data-role="controlgroup">
-	<?php
-	foreach($questions as $id => $question)
-	{
-		echo "<legend>$question</legend>";
-		$randomChoices = $choices[$id];
-		$randomChoices = shuffle_assoc($randomChoices);
-		foreach ($randomChoices as $key => $values)
-			{
-				echo '<input type="radio" id="radio-choice-'.$id.'" value="'.$values.'" required/>';
-			}
-		}
-	?>
-		<label for="radio-choice-<?php echo($id);?>"><?php echo($values);?></label>
-
-	</fieldset>
-<fieldset data-role="controlgroup">
-<legend>Choose a pet:</legend>
-<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
-<label for="radio-choice-1">Cat</label>
-
-<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
-<label for="radio-choice-2">Dog</label>
-
-<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
-<label for="radio-choice-3">Hamster</label>
-
-<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4"  />
-<label for="radio-choice-4">Lizard</label>
-</fieldset>
-
-    <!--<?php
+    <?php
     foreach($questions as $id => $question) {
 
-        echo "<div class=\"form-group\">";
+
         echo "<h4> $question</h4>"."<ol>";//display the question
 
         //Display multiple choices
         $randomChoices = $choices[$id];
         $randomChoices = shuffle_assoc($randomChoices);
         foreach ($randomChoices as $key => $values){
-            echo '<input type="radio" name="['.$id.'] id="'.$id.'" value="' .$values.'" required/>';
-        ?>
-            <label for="<?php echo($id); ?>"><?php echo($values);?></label></li><br>
-    <?php
+            echo '<li>
+                    <input type="radio" name="response['.$id.'] id="'.$id.'" value="' .$values.'" required/>
+                        <label for="question-'.$id.'">'.$values.'</label>
+                    </li>
+                    <br>';
 
         }
+            echo("</ol>");
         }
-       ?>-->
+       ?>
     <input type="submit" name="submit" class="btn btn-primary" value="Submit Quiz" />
 	<br>
 	<input type="reset" name="reset" class="btn btn-primary" value="Reset Quiz" onclick="test();" />
@@ -174,21 +137,5 @@ if($wrongAnswer!=0)
 	</div>
 	<br>
 	<br>
-
-<!--
-
-<fieldset data-role="controlgroup">
-<legend>Vertical controlgroup, radio:</legend>
-<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="on" checked="checked">
-<label for="radio-choice-v-2a">One</label>
-<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="off">
-<label for="radio-choice-v-2b">Two</label>
-<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="other">
-<label for="radio-choice-v-2c">Three</label>
-</fieldset>-->
-
-
-
-
 </body>
 </html>

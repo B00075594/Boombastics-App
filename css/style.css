@@ -1,6 +1,12 @@
 body{
 	background-color:#C3C3E5;
 }
+
+#title{
+	color:white;
+	font-size:18px;
+	padding-left:10px;
+}
 label,a{
 	font-weight:bold;
 	color:#732C7B;
@@ -40,10 +46,6 @@ form{
 	text-align: left;
 }
 
-#space{
-	margin-top:10px;
-	background-color:#C3C3E5;
-}
 input[type="submit"], input[type="reset"]{
 	margin-top:10px;
 	font-weight: bold;
@@ -56,21 +58,21 @@ input[type="submit"], input[type="reset"]{
   	color:white;
 }
 
-
-
 #move{
 	margin-top: 60px;
 }
 
 input[type="button"]{
 	background-color: #732C7B;
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	margin: 5px;
 }
-
-#title{
-	color:white;
-	font-size:18px;
-	padding-left:10px;
+a{
+	font-size:18px;	
+}
+#button_size{
+	width: 130px !important;
+	height: 130px !important;
+	padding: inherit;
 }

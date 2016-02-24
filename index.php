@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
 
 	<link rel="icon" type="image/ico" href="images/icon.png">
@@ -52,25 +53,30 @@
     </nav>
 
 <center>
-<img src="images/imageedit_3_7887026764.png" id="user-default">
+	<div class="container">
+		<img src="images/icon.png" id="user-default">
 
-<br>
-<?php include 'header.php';?>
+		<br>
+		<?php include 'header.php';?>
 
-<form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
-	<label for="user">Username</label>
-	<input type="user" name="username" autofocus="">
-	<br>
-	<label for="password">Password</label>
-	<input type="password" name="password">
-	<br>
-	<div id="space">
-		<input type="submit" value="Login">
-		<input type="reset" value="Reset">
+		<form action="<?php echo($_SERVER['PHP_SELF']); ?>" role="form-group" method="POST">
+			<div class="form-group">
+				<label for="user">Username</label>
+				<input type="user" class="form-control" name="username" autofocus="">
+			</div>
+			<br>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" name="password">
+			</div>
+			<br>
+			<div id="space">
+				<input type="submit" value="Login">
+				<input type="reset" value="Reset">
+			</div>
+			<a href="accountreset.php">Account Issues?</a>
+		</form>
 	</div>
-	<br><br>
-	<a href="accountreset.php">Account Issues?</a>
-</form>
 </center>
 </body>
 </html>

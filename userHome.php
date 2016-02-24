@@ -3,7 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Menu</title>
 
 	<link rel="icon" type="image/ico" href="images/icon.png">
@@ -53,15 +54,15 @@
     </nav>
 
 	<?php include 'include/speak.php';?>
-
-	<center style="margin-top: 90px;">
+<div class="container">
+	<center style="margin-top: 50px;">
 		<h1>Main Menu</h1>
-		<input type="button" onclick="window.location.href='logout.php';" class="btn btn-default" value="Logout">
-		<input type="button" onclick="window.location.href='score.php';" class="btn btn-default" value="Score">
+		<input type="button" onclick="window.location.href='logout.php';" class="btn btn-default" id="button_size" value="Logout">
+		<input type="button" onclick="window.location.href='score.php';" class="btn btn-default" id="button_size" value="Score">
 		<br>
-		<input type="button" onclick="window.location.href='quiz.php';" class="btn btn-default" value="Quiz">
-		<input type="button" onclick="window.location.href='settings.php';" class="btn btn-default" value="Settings">
-
+		<input type="button" onclick="window.location.href='quiz.php';" class="btn btn-default" id="button_size" value="Quiz">
+		<input type="button" onclick="window.location.href='settings.php';" class="btn btn-default" id="button_size" value="Settings">
 	</center>
+</div>
 </body>
 </html>

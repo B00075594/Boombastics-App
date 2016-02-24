@@ -30,8 +30,10 @@ if(isset($_POST['username']))
 		}
 	}
 	else{
-	echo "<span style='color:red;'>Sorry the username or the password is wrong!!</span><br>";
-	$inDatabase='false';
+		echo '<div class="alert alert-danger">';
+	    echo '<strong>Warning!</strong> The username or the password is wrong!!';
+  		echo '</div>';
+		$inDatabase='false';
 	}
 }
 ?>

@@ -76,3 +76,16 @@ a{
 	height: 130px !important;
 	padding: inherit;
 }
+
+.container_userHome #computerImage{
+	height: 300px;
+	width: 350px;
+	position: fixed;
+	left: 10px;
+	z-index: -1;
+}
+
+.container_userHome #testMessage{
+
+	margin-top: 80px;
+}

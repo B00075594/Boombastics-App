@@ -21,7 +21,7 @@ img{
 	margin-top: 60px;
 }
 
-label, input[type="user"],input[type="password"],input[type="name"],input[type="email"]{
+label, input[type="user_name"],input[type="password"],input[type="name"],input[type="email"]{
 	float:left;
 	display:block;	
 	width: 114px;
@@ -30,7 +30,7 @@ label, input[type="user"],input[type="password"],input[type="name"],input[type="
 	border: none;
 
 }
-input[type="user"],input[type="password"],input[type="name"],input[type="email"]{
+input[type="user_name"],input[type="password"],input[type="name"],input[type="email"]{
 	width: 140px;
 	border: 2px solid #732C7B;
 	color:#732C7B;

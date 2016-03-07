@@ -57,6 +57,7 @@
 <center style="margin-top: 90px;">
 
 	<h1>Sign Up</h1>
+	
 	<?php include 'include/signUp.php';?>
 
 	<form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">

@@ -51,12 +51,11 @@
 
 			$query = "INSERT INTO users VALUES ('".$ID."','".$name."','".$username."','".$password."','".NULL."','".NULL."','".NULL."','".$email."','".$nationality."')";
 			$result = mysql_query($query) or die("SQL query failed");
-			echo "$ID";
+			// echo "$ID";
 			mysql_close($db_link);
 
 			$_SESSION["password"]=$password;
 
-			echo "$username is not in the database";
 			echo "$username is not in the database and will be added now hello and welcome to our first ever app $username";
 			$inDatabase='false';
 			$_SESSION["username"]=$username;

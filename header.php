@@ -3,14 +3,15 @@ if(isset($_POST['username']))
 {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-	require_once("include/db_connect.php");
+	// require_once("include/db_connect.php");
+	require_once("config/db.php");
 	$db_link = db_connect("majorgroupproject");
 	$self = $_SERVER['PHP_SELF'];
 
 	$result = @mysql_query("Select *
 	From users
-	WHERE username LIKE '$username'
-	AND password LIKE '$password'");
+	WHERE user_name LIKE '$username'
+	AND user_password_hash LIKE '$password'");
 
 	$fields = mysql_list_fields("majorgroupproject","users");
 	$num_cols = mysql_num_fields($fields);

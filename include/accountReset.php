@@ -11,7 +11,7 @@ if(isset($_POST['email']))
 
 	$result = @mysql_query("Select *
 	From users
-	WHERE email LIKE '$email'");
+	WHERE user_email LIKE '$email'");
 
 	$fields = mysql_list_fields("majorgroupproject","users");
 	$num_cols = mysql_num_fields($fields);
@@ -22,8 +22,8 @@ if(isset($_POST['email']))
 			while($row = mysql_fetch_array($result))
 			{
 				$query="UPDATE users
-				SET password='$password'
-				WHERE email='$email'";
+				SET user_password_hash='$password'
+				WHERE user_email='$email'";
 
 				$result = mysql_query($query) or die("SQL query failed");
 				mysql_close($db_link);

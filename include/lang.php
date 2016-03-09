@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['nationality']))
 {
-	$username = $_SESSION["username"];
+	$username = $_SESSION["user_name"];
 	$lang = $_POST['nationality'];
 	require_once("include/db_connect.php");
 	$db_link = db_connect("majorgroupproject");
@@ -10,7 +10,7 @@ if(isset($_POST['nationality']))
 
 	$result = @mysql_query("Select *
 	From users
-	WHERE username LIKE '$username'");
+	WHERE user_name LIKE '$username'");
 
 	$fields = mysql_list_fields("majorgroupproject","users");
 	$num_cols = mysql_num_fields($fields);
@@ -21,7 +21,7 @@ if(isset($_POST['nationality']))
 		{
 			$query="UPDATE users
 			SET nationality='$lang'
-			WHERE username='$username'";
+			WHERE user_name='$username'";
 
 			$result = mysql_query($query) or die("SQL query failed");
 			mysql_close($db_link);

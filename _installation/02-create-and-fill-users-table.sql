@@ -25,11 +25,12 @@ TRUNCATE TABLE `users`;
 --
 
 INSERT INTO `users` (`user_id`, `name`, `user_name`, `user_password_hash`, `score`, `QuestionRight`, `QuestionsWrong`, `user_email`, `Nationality`) VALUES
-(1, 'Darren', 'Darren', 'darren', 0, 0, 0, 'darren@hotmail.com', 'spanish'),
-(2, 'Ryan', 'Ryan', 'ryan', 0, 0, 0, '', 'spanish'),
-(3, 'Rachel', 'Rachel', 'rachel', 0, 0, 0, 'rachelegan@live.co.uk', ''),
-(4, 'luke', 'luke', 'luke', 0, 0, 0, 'luke@hotmail.com', ''),
-(5, 'dina', 'dina', 'dina', 0, 0, 0, 'dina@gmail.com', 'spanish');
+(1, 'Darren', 'Darren', '$2y$10$I1Cenw2BDC0GLZF11hP5Vutj8hIB726YIN0ILf4W8b6aWAuFG448K', 0, 0, 0, 'darren@hotmail.com', 'spanish'),
+(2, 'Ryan', 'Ryan', '$2y$10$M6PTVAjoGhEgoFx7QyTNxubAkLBx6FPvjxfaQaLXAEV7jPJDw8fZi', 0, 0, 0, '', 'spanish'),
+(3, 'Rachel', 'Rachel', '$2y$10$ipFtDbGRN29phKbePCM0POfSKCVONkKKDmG/GNHxqMTjYVD6O4fXi', 0, 0, 0, 'rachelegan@live.co.uk', ''),
+(4, 'Luke', 'luke', '$2y$10$WDOn1VPheBFwK1q0psu6Z.hsoECEyBWUeDJQ2rn/taum/CBjv44i2', 0, 0, 0, 'luke@hotmail.com', ''),
+(5, 'Dina', 'dina', '$2y$10$tnwkLkC4GC59PY8qeep/LuBZTH2airquFc9nnW/lGkhGqf.MPqSEu', 0, 0, 0, 'dina@gmail.com', 'spanish'),
+(6, 'Cid', 'cid', '$2y$10$IbYWp8qqMTIN9HV.SGSSMehqvsVdPVr/zzplHesK7d8GJJHQ/YQuy', 0, 0, 0, 'alannettto@gmail.com', 'french' );
 
 
 

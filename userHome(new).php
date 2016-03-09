@@ -40,7 +40,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a href="logout.php">Log Out</a>
+                        <a href="index.php?logout">Logout</a>
                     </li>
                     <li>
                         <a href="about.php">About</a>

@@ -38,7 +38,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a href="logout.php">Log Out</a>
+                        <a href="index.php?logout">Log Out</a>
                     </li>
                     <li>
                         <a href="about.php">About</a>
@@ -57,7 +57,7 @@
 <div class="container">
 	<center style="margin-top: 50px;">
 		<h1>Main Menu</h1>
-		<input type="button" onclick="window.location.href='logout.php';" class="btn btn-default" id="button_size" value="Logout">
+		<input type="button" onclick="window.location.href='index.php?logout';" class="btn btn-default" id="button_size" value="Logout">
 		<input type="button" onclick="window.location.href='score.php';" class="btn btn-default" id="button_size" value="Score">
 		<br>
 		<input type="button" onclick="window.location.href='quiz.php';" class="btn btn-default" id="button_size" value="Quiz">

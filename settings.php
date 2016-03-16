@@ -58,6 +58,7 @@
 
 <center style="margin-top: 90px;">
 <h1>Settings</h1>
+
 <input type="button" onclick="window.location.href='password.php';" class="btn btn-default" id="button_size" value="Change Password">
 <input type="button" onclick="window.location.href='email.php';" class="btn btn-default" id="button_size" value="Change Email">
 <br>

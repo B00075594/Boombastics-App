@@ -5,7 +5,10 @@ if(isset($_POST['username']))
 	$password = $_POST['password'];
 	// require_once("include/db_connect.php");
 	require_once("config/db.php");
-	$db_link = db_connect("majorgroupproject");
+	// $db_link = db_connect("majorgroupproject");
+
+	$this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
 	$self = $_SERVER['PHP_SELF'];
 
 	$result = @mysql_query("Select *

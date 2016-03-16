@@ -64,7 +64,10 @@
 	<input type="password" name="password">
 	<br>
 	<label for="password" style="width:122px">New Password</label>
-	<input type="password" name="newpassword">
+    <input type="password" name="newPassword">
+    <br>
+    <label for="password" style="width:122px">Repeat New Password</label>
+	<input type="password" name="repeatNewPassword">
 	<br>
 	<div id="space">
 		<input type="submit" value="Submit">

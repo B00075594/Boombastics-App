@@ -1,24 +1,28 @@
 <?php
 	$user_name = $_SESSION["user_name"];
-	require_once("include/db_connect.php");
-	$db_link = db_connect("majorgroupproject");
+	require_once("config/db.php");
+
+	$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 	$self = $_SERVER['PHP_SELF'];
+	
+	/* check connection */
+	if (mysqli_connect_errno()) {
+	    printf("Connect failed: %s\n", mysqli_connect_error());
+	    exit();
+	}
+	 
+	$query = "SELECT user_name, Nationality
+	            FROM users
+	            WHERE user_name = '" . $user_name . "' OR Nationality = '" . $user_name . "';";
 
+	if ($result = $mysqli->query($query)) {
 
-	$result = @mysql_query("Select *
-	From users
-	WHERE user_name LIKE '$user_name'");
+	    /* fetch object array */
+	    while ($obj = $result->fetch_object()) {
+	        // printf ("%s (%s)\n", $obj->user_name, $obj->Nationality);
 
-	$fields = mysql_list_fields("majorgroupproject","users");
-	$num_cols = mysql_num_fields($fields);
-
-
-	if(mysql_num_rows($result)>0)
-	{
-		while($row = mysql_fetch_array($result))
-		{
-			$speak = $row['Nationality'];
-			echo $speak;
+			$speak = $obj->Nationality;
+			
 			if($speak=="english")
 			{
 				echo "<audio controls autoplay src = './media/langs/english/hello.mp3' hidden='true'></audio>";
@@ -31,6 +35,10 @@
 			{
 				echo "<audio controls autoplay src = './media/langs/english/hello.mp3' hidden='true'></audio>";
 			}
-		}
+
+	    }
+	    /* free result set */
+	    $result->close();
 	}
+		
 ?>

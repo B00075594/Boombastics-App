@@ -1,3 +1,17 @@
+<?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+                require_once("config/db.php");
+
+                // load the login class
+                require_once("classes/Login.php");
+
+                // create a login object. when this object is created, it will do all login/logout stuff automatically
+                // so this single line handles the entire login process. in consequence, you can simply ...
+                $login = new Login();
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -55,9 +69,7 @@
 		<img src="images/icon.png" class="img-responsive" id="user-default" width="200px">
 
 		<br>
-		<?php include 'header.php';?>
-            <?php
-
+        <?php
                 // checking for minimum PHP version
                 if (version_compare(PHP_VERSION, '5.3.7', '<')) {
                     exit("Sorry, the system requires PHP version greater than 5.3.7 !");
@@ -68,15 +80,7 @@
                 }
 
                 // include the configs / constants for the database connection
-                require_once("config/db.php");
-
-                // load the login class
-                require_once("classes/Login.php");
-
-                // create a login object. when this object is created, it will do all login/logout stuff automatically
-                // so this single line handles the entire login process. in consequence, you can simply ...
-                $login = new Login();
-
+                
                 // ... ask if we are logged in here:
                 if ($login->isUserLoggedIn() == true) {
                     // the user is logged in. you can do whatever you want here.
@@ -90,6 +94,8 @@
                     include("views/not_logged_in.php");
                 }
             ?>
+
+
 
 	</div>
 </center>

@@ -91,7 +91,7 @@ class Registration
                 $query_check_user_name = $this->db_connection->query($sql);
 
                 if ($query_check_user_name->num_rows == 1) {
-                    $this->errors[] = "Sorry, that username / email address is already taken.";
+                    $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Sorry, that username / email address is already taken.</div>';
                 } else {
                     // write new user's data into database
                     $sql = "INSERT INTO users (user_name, user_password_hash, user_email)

@@ -1,10 +1,7 @@
 <?php
 	$user_name = $_SESSION["user_name"];
-	// require_once("include/db_connect.php");
 	require_once("config/db.php");
 
-	// $db_link = db_connect("majorgroupproject");
-	// $db_link = db_connection("majorgroupproject");
 	$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 	$self = $_SERVER['PHP_SELF'];
 	
@@ -22,7 +19,7 @@
 
 	    /* fetch object array */
 	    while ($obj = $result->fetch_object()) {
-	        printf ("%s (%s)\n", $obj->user_name, $obj->Nationality);
+	        // printf ("%s (%s)\n", $obj->user_name, $obj->Nationality);
 
 			$speak = $obj->Nationality;
 			

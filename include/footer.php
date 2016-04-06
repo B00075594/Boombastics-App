@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Darren Cosgrave
- * Date: 06/04/2016
- * Time: 16:46
- */
-?>
 <footer>
-    Copyright&copy; <a href="">T&C</a>
+   <p style="font-size:13px">&copy 2016  <a style="font-size:13px" href="docs/termsandconditions.pdf">T&C</a>   <a style="font-size:13px" href="docs/privacypolicy.pdf">Privacy Policy</a></p>
 </footer>

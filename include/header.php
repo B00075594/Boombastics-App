@@ -29,6 +29,9 @@ echo '<nav class="navbar navbar-default navbar-fixed-top" style="background-colo
                     echo '<li>';
                         echo '<a href="contactNOTLOGIN.php">Contact</a>';
                     echo '</li>';
+                    echo '<li>';
+                    echo '<a href="T&CNOTLOGIN.php">T&C</a>';
+                    echo '</li>';
                 echo '</ul>';
             echo '</div>';
     echo '</div>';

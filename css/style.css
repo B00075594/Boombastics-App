@@ -31,9 +31,11 @@ label, input[type="user_name"],input[type="password"],input[type="name"],input[t
 
 }
 input[type="user_name"],input[type="password"],input[type="name"],input[type="email"],input[type="text"]{
-	width: 140px;
+	width: 180px;
+	height: 40px;
 	border: 2px solid #732C7B;
 	color:#732C7B;
+	text-align: center;
 }
 br{
 	clear:left;

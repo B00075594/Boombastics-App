@@ -7,7 +7,7 @@ body{
 	font-size:18px;
 	padding-left:10px;
 }
-label,a{
+label,a ,h1 ,h2{
 	font-weight:bold;
 	color:#732C7B;
 }
@@ -72,6 +72,33 @@ input[type="button"]{
 }
 a{
 	font-size:18px;	
+}
+.left{
+	float: left;
+	border: 2px solid #732C7B;
+	margin: 10px;
+}
+.right{
+	float: right;
+	border: 2px solid #732C7B;
+	margin: 10px;
+}
+
+.p_left{
+	float: left;
+	text-align: start;
+}
+.p_right{
+	float: right;
+	text-align: start;
+}
+
+.special_layout h2{
+	font-size: 20px;
+
+}
+.special_layout p{
+	font-size: 18px;
 }
 #button_size{
 	width: 130px !important;

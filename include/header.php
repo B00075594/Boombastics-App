@@ -18,7 +18,8 @@ echo '<nav class="navbar navbar-default navbar-fixed-top" style="background-colo
                         echo '<a href="#page-top"></a>';
                     echo '</li>';
                     echo '<li>';
-                        echo '<a href="signUp.php">Sign Up</a>';
+                    echo '<a href="register.php">Register new account</a>';
+                        //echo '<a href="signUp.php">Sign Up</a>';
                     echo '</li>';
                     echo '<li>';
                         echo '<a href="index.php">Home</a>';

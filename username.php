@@ -61,10 +61,10 @@
 
 <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
 	<label for="password" style="width:130px">Current Username</label>
-	<input type="user" name="username">
+	<input type="text" name="username">
 	<br>
 	<label for="password" style="width:122px">New Username</label>
-	<input type="user" name="newusername">
+	<input type="text" name="newusername">
 	<br>
 	<div id="space">
 		<input type="submit" value="Submit">

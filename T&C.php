@@ -48,7 +48,7 @@
         &#183; Because we reserve the right to change the Terms of Service at any time, we recommend visiting this page periodically to make sure that the rules
         have not changed since your last visit. By using these Site, you agree to be bound by all of the current terms of service.
     </p>
-    <h2>
+    <h2 style="font-size: 23px;">
         Here are the Terms of Service we expect you to follow:
     </h2>
     <h4 align="center">

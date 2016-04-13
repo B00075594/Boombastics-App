@@ -31,46 +31,13 @@ if (isset($registration)) {
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#732C7B">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <h1 id="title">Reboot Networking</h1>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="hidden">
-                    <a href="#page-top"></a>
-                </li>
-                <li>
-                    <a href="signUp.php">Sign up</a>
-                </li>
-                <li>
-                    <a href="aboutNOTLOGIN.php">About</a>
-                </li>
-                <li>
-                    <a href="contactNOTLOGIN.php">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
+<?php include 'include/header.php';?>
 
 <div class="container" style="margin-top: 70px;">
 
     <!-- register form -->
     <form method="post" action="register.php" name="registerform">
-
+        <h1>Sign Up</h1>
         <div class="form-group">
             <!-- the user name input field uses a HTML5 pattern check -->
             <label for="login_input_username">Username</label>

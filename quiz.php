@@ -22,11 +22,24 @@
 
 <center style="margin-top: 90px;">
 <h1>Quiz</h1>
-<input type="button" onclick="window.location.href='levels/level1.php';" class="btn btn-default" id ="button_size" value="Level 1">
+	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='levels/level1.php';">
+		Level 1
+	</button>
+	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='level2.php';" disabled>
+		Level 2
+	</button>
+	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='level3.php';" disabled>
+		Level 3
+	</button>
+	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='userHome.php';">
+		Main Menu
+	</button>
+
+<!--<input type="button" onclick="window.location.href='levels/level1.php';" class="btn btn-default" id ="button_size" value="Level 1">
 <input type="button" onclick="window.location.href='level2.php';" class="btn btn-default" id ="button_size" value="Level 2" disabled>
 <br>
 <input type="button" onclick="window.location.href='level3.php';" class="btn btn-default" id ="button_size" value="Level 3" disabled>
-<input type="button" onclick="window.location.href='userHome.php';" class="btn btn-default" id ="button_size" value="Main Menu">
+<input type="button" onclick="window.location.href='userHome.php';" class="btn btn-default" id ="button_size" value="Main Menu">-->
 
 </center>
 </body>

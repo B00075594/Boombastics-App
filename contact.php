@@ -17,13 +17,38 @@
 </head>
 <body>
 
-<?php include 'include/headerLOGIN.php';?>
+	<?php include 'include/headerLOGIN.php';?>
 
 <center style="margin-top: 90px;">
 
 <h1>Contact</h1>
 
 <p>You can get in touch with us by emailing us at example@example.com</p>
+
+	<!-- Do not change the code! -->
+	<a id="foxyform_embed_link_769550" href="http://www.foxyform.com/">foxyform</a>
+	<script type="text/javascript">
+		(function(d, t){
+			var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			g.src = "http://www.foxyform.com/js.php?id=769550&sec_hash=97a87424aa7&width=350px";
+			s.parentNode.insertBefore(g, s);
+		}(document, "script"));
+	</script>
+	<!-- Do not change the code! -->
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/570e32a5567c861b21d08cf9/default';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
 
 </center>
 </body>

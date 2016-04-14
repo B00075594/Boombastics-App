@@ -1,3 +1,7 @@
+body{
+	background-color:#C3C3E5;
+}
+
 label,a{
 	font-weight:bold;
 	color:#732C7B;
@@ -12,11 +16,6 @@ img{
 	margin-top: 60px;
 }
 
-input[type="user"],input[type="password"],input[type="name"],input[type="email"]{
-	width: 140px;
-	border: 2px solid #732C7B;
-	color:#732C7B;
-}
 br{
 	clear:left;
 }
@@ -36,22 +35,35 @@ input[type="submit"], input[type="reset"]{
   	cursor: pointer;
   	color:white;
 }
-
-
-
 #move{
 	margin-top: 60px;
-}
-
-input[type="button"]{
-	background-color: #732C7B;
-	width: 150px;
-	height: 150px;
-	margin: 5px;
 }
 
 #title{
 	color:white;
 	font-size:18px;
 	padding-left:10px;
+}
+
+.dg-question-label{
+	text-align: left;
+	padding: 1em;
+}
+
+.dg-question-option{
+	text-align: left;
+	padding: 1em;
+}
+
+#questions{
+	margin-top: 50px;
+	padding: 1em;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#error{
+	color:red;
+	font-weight: bold;
 }

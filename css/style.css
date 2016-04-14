@@ -108,6 +108,7 @@ nav a{
 #button_color{
 	background-color: #732C7B;
 	border: none;
+    margin-top: 20px;
 }
 
 .container_userHome #computerImage{
@@ -121,6 +122,11 @@ nav a{
 .container_userHome #testMessage{
 
 	margin-top: 80px;
+}
+
+#button_container{
+    padding-left: 10px!important;
+    padding-right: 10px!important;
 }
 
 select {

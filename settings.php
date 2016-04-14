@@ -19,32 +19,35 @@
 <body>
 
     <?php include 'include/headerLOGIN.php';?>
-
-<center style="margin-top: 90px;">
-<h1>Settings</h1>
-	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='password.php';">
-		Change Password
-	</button>
-	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='email.php';">
-		Change Email
-	</button>
-	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='username.php';">
-		Change Username
-	</button>
-	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='lang.php';">
-		Change Languages
-	</button>
-	<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='userHome.php';">
-		Main Menu
-	</button>
-	<!--
-<input type="button" onclick="window.location.href='password.php';" class="btn btn-default" id="button_size" value="Change Password">
-<input type="button" onclick="window.location.href='email.php';" class="btn btn-default" id="button_size" value="Change Email">
-<br>
-<input type="button" onclick="window.location.href='username.php';" class="btn btn-default" id="button_size" value="Change Username">
-<input type="button" onclick="window.location.href='lang.php';" class="btn btn-default" id="button_size" value="Change Languages">
-<br>
-<input type="button" onclick="window.location.href='userHome.php';" class="btn btn-default" id="button_size" value="Main Menu">-->
-</center>
+	<div class="container">
+		<center style="margin-top: 90px;">
+        <div id="button_container">
+		<h1>Settings</h1>
+			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='password.php';">
+				Change Password
+			</button>
+			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='email.php';">
+				Change Email
+			</button>
+			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='username.php';">
+				Change Username
+			</button>
+			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='lang.php';">
+				Change Languages
+			</button>
+			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='userHome.php';">
+				Main Menu
+			</button>
+        </div>
+			<!--
+		<input type="button" onclick="window.location.href='password.php';" class="btn btn-default" id="button_size" value="Change Password">
+		<input type="button" onclick="window.location.href='email.php';" class="btn btn-default" id="button_size" value="Change Email">
+		<br>
+		<input type="button" onclick="window.location.href='username.php';" class="btn btn-default" id="button_size" value="Change Username">
+		<input type="button" onclick="window.location.href='lang.php';" class="btn btn-default" id="button_size" value="Change Languages">
+		<br>
+		<input type="button" onclick="window.location.href='userHome.php';" class="btn btn-default" id="button_size" value="Main Menu">-->
+		</center>
+	</div>
 </body>
 </html>

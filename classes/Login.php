@@ -109,7 +109,7 @@ class Login
         $_SESSION = array();
         session_destroy();
         // return a little feeedback message
-        $this->messages[] = '<div class="alert alert-success" style=\"margin-top:10px;\"><strong>Success!!!</strong> You have been logged out.</div>';
+        $this->messages[] = '<div class="alert alert-success" style="margin-top:10px;"><strong>Success!!!</strong> You have been logged out.</div>';
 
     }
 

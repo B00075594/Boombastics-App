@@ -102,7 +102,7 @@ var questions = [
 ]
 
 function showAnswerAlert() {
-    document.id('error').set('html', 'You have to answer before you continue to the next question');
+    document.id('error').set('html', '<div class="alert alert-danger" style="margin-top:10px;"><strong>Error!!!</strong> You have to answer before you continue to the next question.</div>');
 }
 function clearErrorBox() {
     document.id('error').set('html','');

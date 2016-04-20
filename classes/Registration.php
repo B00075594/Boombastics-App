@@ -100,7 +100,7 @@ class Registration
 
                     // if user has been added successfully
                     if ($query_new_user_insert) {
-                        $this->messages[] = "Your account has been created successfully. You can now log in.";
+                        $this->messages[] = '<div class="alert alert-success" style="margin-top:10px;"><strong>Success!!!</strong> Your account has been created successfully. You can now log in.</div>';
                     } else {
                         $this->errors[] = "Sorry, your registration failed. Please go back and try again.";
                     }

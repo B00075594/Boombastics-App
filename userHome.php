@@ -20,7 +20,7 @@
 
 	<?php include 'include/speak.php';?>
 <div class="container">
-	<center style="margin-top: 50px;">
+	<center style="margin-top: 10px;">
 		<div id="button_container">
 			<h1>Main Menu</h1>
 			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='index.php?logout';">

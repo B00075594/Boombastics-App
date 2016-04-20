@@ -6,14 +6,15 @@ function showScore() {
     var score = quizMaker.getScore();
 
     var el = new Element('h3');
-    el.set('html', 'Thank you!');
+    el.set('html', 'Your Results: ');
+
     document.id('result').adopt(el);
 
     el = new Element('h4');
     el.set('html', 'Score: ' + score.numCorrectAnswers + ' of ' + score.numQuestions);
     document.id('result').adopt(el);
 
-    if(score.incorrectAnswers.length > 0) {
+    if(score.incorrectAnswers.length > 0) { 5
         el = new Element('h4');
         el.set('html', 'Incorrect answers:');
         document.id('result').adopt(el);
@@ -21,88 +22,85 @@ function showScore() {
         for(var i=0;i<score.incorrectAnswers.length;i++) {
             var incorrectAnswer = score.incorrectAnswers[i];
             el = new Element('div');
-            el.set('html', '<b>' +  incorrectAnswer.questionNumber + ': ' + incorrectAnswer.label + '</b>');
+            el.set('html', '<b>' + incorrectAnswer.label + '</b>');
             document.id('result').adopt(el);
 
             el = new Element('div');
-            el.set('html', 'Correct answer : ' + incorrectAnswer.correctAnswer);
+            el.set('html', '<div class="wrongUserInput">' + incorrectAnswer.userAnswer);
             document.id('result').adopt(el);
-            el = new Element('div');
-            el.set('html', 'Your answer : ' + incorrectAnswer.userAnswer);
-            document.id('result').adopt(el);
+            e1 = new Element('br');
 
         }
+        e1.set('html', 'To move on you need to answer ', score.incorrectAnswers, ' correctly');
     }
-
 }
 
 var questions = [
     {
         label : 'A _____ is a device that forwards packets between networks by processing the routing information included in the packet?',
-        options : ['bridge', 'firewall', 'all of the mentioned', 'router'],
-        answer : ['router'],
+        options : ['Bridge', 'Router', 'Firewall', 'All of the mentioned'],
+        answer : ['Router'],
         forceAnswer : true
     },
     {
         label : 'Network congestion occurs_____ ',
-        options : ['when a system terminates', 'when connection between two nodes terminates', 'none of the mentioned'],
-        answer : ['in case of traffic overloading'],
+        options : ['When a system terminates', 'When connection between two nodes terminates', 'None of the mentioned', 'In case of traffic overloading'],
+        answer : ['In case of traffic overloading'],
         forceAnswer : true
     },
     {
         label : 'Communication channel is shared by all the machines on the network in ',
-        options : ['unicast network', 'multicast network', 'none of the mentioned'],
-        answer : ['broadcast network'],
+        options : ['Broadcast network','Unicast network', 'Multicast network', 'None of the mentioned'],
+        answer : ['Broadcast network'],
         forceAnswer : true
-    }
-    ,
+    },
     {
         label : 'What are the layers of the OSI Model? ',
-        options : ['Application, Presentation, Transport, Session, Physical, Network.','Presentation, Network, Datalink, Transport, Session.','Physical, Network, Link-State, Transport, Session, Presentation, Application.'],
+        options : ['Application, Presentation, Transport, Session, Physical, Network.','Presentation, Network, Datalink, Transport, Session.','Physical, Network, Link-State, Transport, Session, Presentation, Application.','Application, Presentation, Session, Transport, Network, Datalink, Physical' ],
         answer : ['Application, Presentation, Session, Transport, Network, Datalink, Physical'],
         forceAnswer : true
     },
     {
         label : 'Which statement is true regarding the user exec and privileged exec mode?',
-        options : ['They both require the enable password ','The ? only works in Privileged exec', 'They are identical'],
+        options : ['They both require the enable password ','The ? only works in Privileged exec', 'User exec is a subset of the privileged exec','They are identical' ],
         answer : ['User exec is a subset of the privileged exec'],
         forceAnswer : true
     },
     {
         label: 'Bluetooth is an example of',
-        options : ['local area network','virtual private network','none of the mentioned'],
-        answer :['personal area network'],
+        options : ['Local area network','Virtual private network','None of the mentioned', 'Personal area network'],
+        answer :['Personal area network'],
         forceAnswer : true
     },
     {
         label: 'Two devices are in network if____ ',
-        options : ['a process is running on both devices','PIDs of the processes running of different devices are same','none of the mentioned'],
-        answer :['a process in one device is able to exchange information with a process in another device'],
+        options : ['A process is running on both devices', 'A process in one device is able to exchange information with a process in another device', 'PIDs of the processes running of different devices are same','None of the mentioned'],
+        answer :['A process in one device is able to exchange information with a process in another device'],
         forceAnswer : true
     },
     {
         label: 'Which one of the following computer network is built on the top of another network?',
-        options : ['prior network','chief network','prime network'],
-        answer :['overlay network'],
+        options : ['Prior network','Chief network','Overlay network', 'Prime network'],
+        answer :['Overlay network'],
         forceAnswer : true
     },
     {
         label: 'A list of protocols used by a system, one protocol per layer, is called',
-        options : ['protocol architecture','protocol suit','none of the mentioned'],
-        answer :['protocol stack'],
+        options : ['Protocol architecture','Protocol suit','None of the mentioned', 'Protocol stack'],
+        answer :['Protocol stack'],
         forceAnswer : true
 
     },
     {
         label: 'In computer network nodes are',
-        options : ['the computer that originates the data','the computer that routes the data','the computer that terminates the data'],
-        answer :['all of the mentioned'],
+        options : ['All of the mentioned', 'The computer that originates the data','The computer that routes the data','The computer that terminates the data'],
+        answer :['All of the mentioned'],
         forceAnswer : true
     }
 ]
 
 function showAnswerAlert() {
-    document.id('error').set('html', '<div class="alert alert-danger" style="margin-top:10px;"><strong>Error!!!</strong> You have to answer before you continue to the next question.</div>');
+    document.id('error').set('html', 'You have to answer before you continue to the next question');
 }
 function clearErrorBox() {
     document.id('error').set('html','');

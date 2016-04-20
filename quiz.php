@@ -15,26 +15,33 @@
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
 	<script  src="javaScript/anamations.js" type="text/javascript"></script>
+
+    <!-- TESTING ANIMATE -->
+    <style> @import "css/animate.css";</style>
+    <!-- TESTING ANIMATE -->
 </head>
 <body>
-
+<div class="animated fadeInDownBig">
     <?php include 'include/headerLOGIN.php';?>
+</div>
 	<div class="container">
 		<center style="margin-top: 90px;">
         <div id="button_container">
-            <h1>Quiz</h1>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='levels/level1.php';">
-                    Level 1
-                </button>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='level2.php';" disabled>
-                    Level 2
-                </button>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='level3.php';" disabled>
-                    Level 3
-                </button>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='userHome.php';">
-                    Main Menu
-                </button>
+            <h1 class="animated bounce">Quiz</h1>
+                <div class="animated fadeInLeft">
+                    <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='levels/level1.php';">
+                        Level 1
+                    </button>
+                    <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='level2.php';" disabled>
+                        Level 2
+                    </button>
+                    <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='level3.php';" disabled>
+                        Level 3
+                    </button>
+                    <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='userHome.php';">
+                        Main Menu
+                    </button>
+                </div>
         </div>
 		<!--<input type="button" onclick="window.location.href='levels/level1.php';" class="btn btn-default" id ="button_size" value="Level 1">
 		<input type="button" onclick="window.location.href='level2.php';" class="btn btn-default" id ="button_size" value="Level 2" disabled>

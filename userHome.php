@@ -13,29 +13,37 @@
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
 	<script  src="javaScript/anamations.js" type="text/javascript"></script>
+
+	<!-- TESTING ANIMATE -->
+	<style> @import "css/animate.css";</style>
+	<!-- TESTING ANIMATE -->
 </head>
 <body>
-
+<div class="animated fadeInDownBig">
     <?php include 'include/headerLOGIN.php';?>
 
 	<?php include 'include/speak.php';?>
+</div>
 <div class="container">
-	<img src="images/icon.png" class="img-responsive" id="user-default" width="200px">
 	<center style="margin-top: 10px;">
 		<div id="button_container">
-			<h1>Main Menu</h1>
-			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='index.php?logout';">
-				Logout
-			</button>
-			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='score.php';">
-				Score
-			</button>
-			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='quiz.php';">
-				Quiz
-			</button>
-			<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='settings.php';">
-				Settings
-			</button>
+            <img src="images/icon.png" class="animated flip" id="user-default" width="200px">
+
+            <h1 class="animated bounce">Main Menu</h1>
+            <div class="animated fadeInLeft">
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='index.php?logout';">
+                    Logout
+                </button>
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='score.php';">
+                    Score
+                </button>
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='quiz.php';">
+                    Quiz
+                </button>
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='settings.php';">
+                    Settings
+                </button>
+            </div>
 		</div>
 		<!--
     		<input type="button" onclick="window.location.href='index.php?logout';" class="btn btn-default" id="button_size" value="Logout">

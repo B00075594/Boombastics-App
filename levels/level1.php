@@ -15,13 +15,48 @@
 	<script src="../javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="../javaScript/external/mootools-core-1.4.5-minified.js"></script>
 	<script type="text/javascript" src="../javaScript/dg-quiz-maker.js"></script>
-
-
+    
 	<!--<style> @import "../css/style.css" </style> -->
 	<style> @import "../css/questionsstyle.css" </style>
 
 </head>
 <body>
+ <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#732C7B">
+    <div class="container">
+             <div class="navbar-header page-scroll">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                <h1 id="title">Reboot Networking</h1>
+             </div>
+
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav navbar-right">
+                 <li class="hidden">
+                    <a href="#page-top"></a>
+                 </li>
+                 <li>
+                    <a href="../index.php?logout">Log Out</a>
+                 </li>
+                 <li>
+                    <a href="../userHome.php">Home</a>
+                 </li>
+                 <li>
+                    <a href="../about.php">About</a>
+                 </li>
+                 <li>
+                    <a href="../contact.php">Contact</a>
+                 </li>
+                 <li>
+                    <a href="../T&C.php">T&C</a>
+                 </li>
+             </ul>
+         </div>
+    </div>
+ </nav>
 
 <?php include '../include/headerLOGIN.php';?>
 

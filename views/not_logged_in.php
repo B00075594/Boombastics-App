@@ -15,26 +15,28 @@ if (isset($login)) {
 ?>
 
 <!-- login form box -->
-<form method="post" action="index.php" name="loginform">
+<div class="animated fadeInLeft">
+    <form method="post" action="index.php" name="loginform">
 
-    <div class="form-group">
-        <label for="login_input_username">Username</label>
-        <input id="login_input_username" class="login_input" type="user_name" name="user_name" placeholder="Enter Name" required />
-    </div>
-    <br>
-    
-    <div class="form-group">
-        <label for="login_input_password">Password</label>
-        <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" placeholder="Enter Password" required />
-    </div>
+        <div class="form-group">
+            <label for="login_input_username">Username</label>
+            <input id="login_input_username" class="login_input" type="user_name" name="user_name" placeholder="Enter Name" required />
+        </div>
+        <br>
 
-    <div id="space">
-        <input type="submit" name="login" value="Login">
-        <input type="reset" value="Reset">
-    </div>
+        <div class="form-group">
+            <label for="login_input_password">Password</label>
+            <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" placeholder="Enter Password" required />
+        </div>
 
-    <a href="accountreset.php">Account Issues?</a>
+        <div id="space">
+            <input type="submit" name="login" value="Login">
+            <input type="reset" value="Reset">
+        </div>
 
-</form>
+        <a href="accountreset.php">Account Issues?</a>
 
-<a href="register.php">Register new account</a>
+    </form>
+
+    <a href="register.php">Register new account</a>
+</div>

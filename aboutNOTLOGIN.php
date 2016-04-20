@@ -14,14 +14,18 @@
 	<script src="javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
+
+	<!-- TESTING ANIMATE -->
+	<style> @import "css/animate.css";</style>
+	<!-- TESTING ANIMATE -->
 </head>
 <body class="special_layout">
-
-    <?php include 'include/header.php';?>
-
-<center style="margin-top: 50px;">
-	<div class="container">
-		<h1>About</h1>
+<div class="animated fadeInDownBig">
+	<?php include 'include/header.php';?>
+</div>
+<div class="container">
+	<div style="margin-top: 60px;text-align: center;">
+		<h1 class="animated bounce">About</h1>
 
 		<p>
 			Boombastics was established in July 2015, in a small caf&#233; in the quaint village of Baile Bhlains&#233;ir, Dublin
@@ -30,7 +34,7 @@
 			mentored by the top educators in the country.
 		</p>
 
-		<div>
+		<div class="animated fadeInLeft">
 			<div class="p_left">
 				<img width="161" height="161" src="images/people/ryan.jpg" class="right" alt="pic of member ryan"/>
 
@@ -42,33 +46,33 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="animated fadeInRight">
 			<div class="p_right">
 				<img width="161" height="161" src="images/people/cid.jpg" class="left" alt="pic of member cid" />
 
 				<h2>Alcidemar Lopes TTO</h2>
 				<p>
-				This smokey little genius is only a temporary addition to the country. Originally from Brazil, Alcidemar was a late-comer to the project. After extensive
-				interviews and police checks, we invited him to join Boombastics to enforce a stringent testing regime. Well, that was the plan. He contributed to the main
-				program on several occasions but he was able to refocus on his own department. Ireland and Boombastics love him!!
+					This smokey little genius is only a temporary addition to the country. Originally from Brazil, Alcidemar was a late-comer to the project. After extensive
+					interviews and police checks, we invited him to join Boombastics to enforce a stringent testing regime. Well, that was the plan. He contributed to the main
+					program on several occasions but he was able to refocus on his own department. Ireland and Boombastics love him!!
 				</p>
 			</div>
 		</div>
 
-		<div>
+		<div class="animated fadeInLeft">
 			<div class="p_left">
 				<img width="161" height="200" src="images/people/darren.jpg" class="right" alt="pic of member darren"/>
 
 				<h2>Darren Cosgrave CGO</h2>
 				<p>
-				Darren is a mysterious creature. Hard to pin down, but once captured, is a diligent and hard-working beast. He brought a lot to this project including the
-				art of challenging the code, and button manipulation. With a keen eye for graphics (ehem!), Darren brought a lot to the GUI design and implementation
-				whenever he was around. Boombastics love him.
+					Darren is a mysterious creature. Hard to pin down, but once captured, is a diligent and hard-working beast. He brought a lot to this project including the
+					art of challenging the code, and button manipulation. With a keen eye for graphics (ehem!), Darren brought a lot to the GUI design and implementation
+					whenever he was around. Boombastics love him.
 				</p>
 			</div>
 		</div>
 
-		<div>
+		<div class="animated fadeInRight">
 
 			<div class="p_right">
 				<img width="161" height="161" src="images/people/rachel.jpg" class="left" alt="pic of member rachel"/>
@@ -82,6 +86,6 @@
 			</div>
 		</div>
 	</div>
-</center>
+</div>
 </body>
 </html>

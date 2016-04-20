@@ -26,15 +26,20 @@ error_reporting(E_ALL);
 	<script src="javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
+
+    <!-- TESTING ANIMATE -->
+    <style> @import "css/animate.css";</style>
+    <!-- TESTING ANIMATE -->
+
 </head>
 <body>
-
+<div class="animated fadeInDownBig">
 <?php include 'include/header.php';?>
-
+</div>
 <center>
 	<div class="container">
 		<br>
-        <img src="images/icon.png" class="img-responsive" id="user-default" width="200px">
+        <img src="images/icon.png" class="animated flip" id="user-default" width="200px">
         <?php
                 // checking for minimum PHP version
                 if (version_compare(PHP_VERSION, '5.3.7', '<')) {
@@ -46,7 +51,7 @@ error_reporting(E_ALL);
                 }
 
                 // include the configs / constants for the database connection
-                
+
                 // ... ask if we are logged in here:
                 if ($login->isUserLoggedIn() == true) {
                     // the user is logged in. you can do whatever you want here.

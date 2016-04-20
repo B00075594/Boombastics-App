@@ -13,32 +13,38 @@
 	<script src="javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
+
+	<!-- TESTING ANIMATE -->
+	<style> @import "css/animate.css";</style>
+	<!-- TESTING ANIMATE -->
 </head>
 <body>
-
+<div class="animated fadeInDownBig">
     <?php include 'include/header.php';?>
+</div>
+<div class="container">
+    <center style="margin-top: 90px;">
 
-<center style="margin-top: 90px;">
-
-	<h1>Reset your account here:</h1>
-	<?php include 'include/accountReset.php';?>
-
-	<form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
-		<label for="email">Email</label>
-		<input type="email" name="email" id="email" required>
-		<br>
-		<label for="password">Password</label>
-		<input type="password" name="password">
-		<br>
-		<label for="password">Confirm Password</label>
-		<input type="password" name="newpassword">
-		<br>
-		<div id="space">
-			<input type="submit" value="Submit">
-			<input type="reset" value="Reset">
-		</div>
-	</form>
-
-</center>
+        <h1 class="animated bounce">Reset your account here:</h1>
+        <?php include 'include/accountReset.php';?>
+        <div class="animated fadeInLeft">
+            <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <br>
+                <label for="password">Confirm Password</label>
+                <input type="password" name="newpassword">
+                <br>
+                <div id="space">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </center>
+</div>
 </body>
 </html>

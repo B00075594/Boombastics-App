@@ -28,55 +28,62 @@ if (isset($registration)) {
     <script src="javaScript/bootstrap.js" type="text/javascript"></script>
     <script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
     <style> @import "css/style.css";</style>
+
+    <!-- TESTING ANIMATE -->
+    <style> @import "../css/animate.css";</style>
+    <!-- TESTING ANIMATE -->
 </head>
 <body>
+<div class="animated fadeInDownBig">
+    <?php include 'include/header.php';?>
+</div>
+<div class="container">
+    <div style="margin-top: 70px;text-align: center;">
+        <h1 class="animated bounce">Sign Up</h1>
+        <div class="animated fadeInLeft">
+            <!-- register form -->
+            <form method="post" action="register.php" name="registerform">
+                <div class="form-group">
+                    <!-- the user name input field uses a HTML5 pattern check -->
+                    <label for="login_input_username">Username</label>
+                    <input id="login_input_username" class="login_input" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" required />
+                </div>
 
-<?php include 'include/header.php';?>
+                <div class="form-group">
+                    <!-- the email input field uses a HTML5 email type check -->
+                    <label for="login_input_email">E-mail</label>
+                    <input id="login_input_email" class="login_input" type="email" name="user_email" required />
+                </div>
 
-<div class="container" style="margin-top: 70px;">
+                <div class="form-group">
+                    <label for="login_input_password_new">Password (min. 6 characters)</label>
+                    <input id="login_input_password_new" class="login_input" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
+                </div>
 
-    <!-- register form -->
-    <form method="post" action="register.php" name="registerform">
-        <h1>Sign Up</h1>
-        <div class="form-group">
-            <!-- the user name input field uses a HTML5 pattern check -->
-            <label for="login_input_username">Username</label>
-            <input id="login_input_username" class="login_input" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" required />
+                <div class="form-group">
+                    <label for="login_input_password_repeat">Repeat password</label>
+                    <input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                        <select name="nationality" required>
+                            <option value="english">English</option>
+                            <option value="german">German</option>
+                            <option value="french">French</option>
+                            <option value="spanish">Spanish</option>
+                        </select>
+                </div>
+                    <br>
+                    <div id="space">
+                        <input type="submit"  name="register" value="Register" />
+                        <input type="reset" value="Reset">
+                    </div>
+
+
+            </form>
         </div>
-
-        <div class="form-group">
-            <!-- the email input field uses a HTML5 email type check -->
-            <label for="login_input_email">E-mail</label>
-            <input id="login_input_email" class="login_input" type="email" name="user_email" required />
-        </div>
-
-        <div class="form-group">
-            <label for="login_input_password_new">Password (min. 6 characters)</label>
-            <input id="login_input_password_new" class="login_input" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
-        </div>
-
-        <div class="form-group">
-            <label for="login_input_password_repeat">Repeat password</label>
-            <input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
-        </div>
-
-        <div class="form-group">
-            <label for="nationality">Nationality</label>
-                <select name="nationality" required>
-                    <option value="english">English</option>
-                    <option value="german">German</option>
-                    <option value="french">French</option>
-                    <option value="spanish">Spanish</option>
-                </select>
-        </div>
-            <br>
-            <div id="space">
-                <input type="submit"  name="register" value="Register" />
-                <input type="reset" value="Reset">
-            </div>
-
-
-    </form>
+    </div>
 </div>
 <!-- backlink -->
 <center>

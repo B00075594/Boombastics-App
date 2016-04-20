@@ -20,23 +20,63 @@
 	<!--<style> @import "../css/style.css" </style> -->
 	<style> @import "../css/questionsstyle.css" </style>
 
+	<!-- TESTING ANIMATE -->
+	<style> @import "../css/animate.css";</style>
+	<!-- TESTING ANIMATE -->
 </head>
 <body>
+<div class="animated fadeInDownBig">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#732C7B">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1 id="title">Reboot Networking</h1>
+            </div>
 
-<?php include '../include/headerLOGIN.php';?>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="../index.php?logout">Log Out</a>
+                    </li>
+                    <li>
+                        <a href="../userHome.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="../about.php">About</a>
+                    </li>
+                    <li>
+                        <a href="../contact.php">Contact</a>
+                    </li>
+                    <li>
+                        <a href="../T&C.php">T&C</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <center style="margin-top: 50px;">
+        <div class="container">
 
-<center style="margin-top: 50px;">
-	<div class="container">
-
-		<div id="output">
-		<div id="questions"></div>
-		<div id="error"></div>
-		<div id="result"></div>
-		</div>
-		<script type="text/javascript" src="level1config.js"></script>
+            <div id="output">
+            <div id="questions"></div>
+            <div id="error"></div>
+            <div id="result"></div>
+            </div>
+            <script type="text/javascript" src="level1config.js"></script>
 
 
 
-</center>
+    </center>
+</div>
 </body>
 </html>

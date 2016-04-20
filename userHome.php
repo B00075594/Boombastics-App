@@ -20,6 +20,7 @@
 
 	<?php include 'include/speak.php';?>
 <div class="container">
+	<img src="images/icon.png" class="img-responsive" id="user-default" width="200px">
 	<center style="margin-top: 10px;">
 		<div id="button_container">
 			<h1>Main Menu</h1>

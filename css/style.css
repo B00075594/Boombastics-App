@@ -219,3 +219,8 @@ nav a{
     padding-left: 10px!important;
     padding-right: 10px!important;
 }
+html body div.container img#user-default.img-responsive{
+	margin: 0 auto;
+	padding-top: 60px
+
+}

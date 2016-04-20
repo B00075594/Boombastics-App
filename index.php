@@ -33,9 +33,8 @@ error_reporting(E_ALL);
 
 <center>
 	<div class="container">
-		<img src="images/icon.png" class="img-responsive" id="user-default" width="200px">
-
 		<br>
+        <img src="images/icon.png" class="img-responsive" id="user-default" width="200px">
         <?php
                 // checking for minimum PHP version
                 if (version_compare(PHP_VERSION, '5.3.7', '<')) {
@@ -53,8 +52,10 @@ error_reporting(E_ALL);
                     // the user is logged in. you can do whatever you want here.
                     // for demonstration purposes, we simply show the "you are logged in" view.
                     // include("views/logged_in.php");
-                    include("userHome.php");
+                    die("<script>location.href = 'userHome.php'</script>");
+                    // include("userHome.php");
                     $user_name = $_SESSION['user_name'];
+
 
 
                 } else {
@@ -62,8 +63,7 @@ error_reporting(E_ALL);
                     // for demonstration purposes, we simply show the "you are not logged in" view.
                     include("views/not_logged_in.php");
                 }
-            ?>
-
+        ?>
 
         <?php include 'include/footer.php';?>
 	</div>

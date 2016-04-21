@@ -12,7 +12,8 @@
 	<script src="javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
-	<script  src="javaScript/anamations.js" type="text/javascript"></script>
+
+    <script  src="javaScript/anamations.js" type="text/javascript"></script>
 
 	<!-- TESTING ANIMATE -->
 	<style> @import "css/animate.css";</style>
@@ -27,9 +28,8 @@
 </div>
 <div class="container" id="container">
 	<center style="margin-top: 10px;">
+        <img src="images/icon.png" class="animated flip" id="user-default" width="200px">
 		<div id="button_container">
-            <img src="images/icon.png" class="animated flip" id="user-default" width="200px">
-
             <h1 class="animated bounce">Main Menu</h1>
             <div class="animated fadeInLeft">
                 <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('index.php?logout')">

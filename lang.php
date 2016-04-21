@@ -14,29 +14,38 @@
 	<script src="javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
+
+    <!-- TESTING ANIMATE -->
+    <style> @import "css/animate.css";</style>
+    <!-- TESTING ANIMATE -->
+	<script src="javaScript/anamations.js" type="text/javascript"></script>
 </head>
 <body>
+<div class="animated fadeInDownBig" id="nav">
+    <?php include 'include/headerLOGIN.php';?>
+</div>
+<div class="container" id="container">
+    <div class="animated fadeInLeft">
+        <center style="margin-top: 90px;">
+        <h1>Change Language</h1>
+        <?php include 'include/lang.php';?>
 
-<?php include 'include/headerLOGIN.php';?>
-
-<center style="margin-top: 90px;">
-<h1>Change Language</h1>
-<?php include 'include/lang.php';?>
-
-<form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
-	<select name="nationality">
-		<option value="english">English</option>
-		<option value="german">German</option>
-		<option value="french">French</option>
-		<option value="spanish">Spanish</option>
-	</select>
-	<br>
-	<div id="space">
-		<input type="submit" value="Submit">
-		<input type="reset" value="Reset">
-	</div>
-</form>
-<p>Click <a href="settings.php">here</a> to go back to settings</p>
-</center>
+        <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
+            <select name="nationality">
+                <option value="english">English</option>
+                <option value="german">German</option>
+                <option value="french">French</option>
+                <option value="spanish">Spanish</option>
+            </select>
+            <br>
+            <div id="space">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <p>Click <a onclick="transition('settings.php')">here</a> to go back to settings</p>
+        </center>
+    </div>
+</div>
 </body>
 </html>

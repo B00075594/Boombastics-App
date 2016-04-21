@@ -1,5 +1,4 @@
 <?php session_start();?>
-<?php include 'header.php';?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -14,64 +13,39 @@
 	<script src="javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
+
+    <script  src="javaScript/anamations.js" type="text/javascript"></script>
+
+    <!-- TESTING ANIMATE -->
+    <style> @import "css/animate.css";</style>
+    <!-- TESTING ANIMATE -->
 </head>
 <body>
+<div class="animated fadeInDownBig" id="nav">
+    <?php include 'include/headerLOGIN.php';?>
+</div>
 
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#732C7B">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h1 id="title">Reboot Networking</h1>
+<div class="container" id="container">
+    <div class="animated fadeInLeft">
+        <center style="margin-top: 90px;">
+        <h1>Change Username</h1>
+        <?php include 'include/username.php';?>
+
+        <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
+            <label for="password" style="width:130px">Current Username</label>
+            <input type="text" name="username">
+            <br>
+            <label for="password" style="width:122px">New Username</label>
+            <input type="text" name="newusername">
+            <br>
+            <div id="space">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a href="index.php?logout">Logout</a>
-                    </li>
-					<li>
-                        <a href="userHome.php">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.php">About</a>
-                    </li>
-                    <li>
-                        <a href="contact.php">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-<center style="margin-top: 90px;">
-<h1>Change Username</h1>
-<?php include 'include/username.php';?>
-
-<form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
-	<label for="password" style="width:130px">Current Username</label>
-	<input type="text" name="username">
-	<br>
-	<label for="password" style="width:122px">New Username</label>
-	<input type="text" name="newusername">
-	<br>
-	<div id="space">
-		<input type="submit" value="Submit">
-		<input type="reset" value="Reset">
-	</div>
-</form>
-<p>Click <a href="settings.php">here</a> to go back to settings</p>
-</center>
+        </form>
+        <p>Click <a onclick="transition('settings.php')">here</a> to go back to settings</p>
+        </center>
+    </div>
+</div>
 </body>
 </html>

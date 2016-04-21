@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 	$("input").animate({
 		opacity: '0.1',
 		height: '100px',
@@ -9,7 +9,7 @@ $(document).ready(function(){
 		height: '150px',
 		width: '150px'
 	});
-});
+});*/
 
 function transition(pageName)
 {

@@ -19,31 +19,30 @@
 	<!-- TESTING ANIMATE -->
 	<style> @import "css/animate.css";</style>
 	<!-- TESTING ANIMATE -->
-
-
+	<script  src="javaScript/anamations.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="animated fadeInDownBig">
+<div class="animated fadeInDownBig" id="nav">
     <?php include 'include/headerLOGIN.php';?>
 </div>
-	<div class="container">
+	<div class="container" id="container">
 		<center style="margin-top: 90px;">
         <div id="button_container">
 			<h1 class="animated bounce">Settings</h1>
 			<div class="animated fadeInLeft">
-				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='password.php';">
+				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('password.php')">
 					Change Password
 				</button>
-				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='email.php';">
+				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('email.php')">
 					Change Email
 				</button>
-				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='username.php';">
+				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('username.php')">
 					Change Username
 				</button>
-				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='lang.php';">
+				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('lang.php')">
 					Change Languages
 				</button>
-				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='userHome.php';">
+				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('userHome.php')">
 					Main Menu
 				</button>
 			</div>

@@ -4,15 +4,14 @@ if(isset($_POST['username']))
 	$username = $_SESSION["username"];
 	$newusername = $_POST['newusername'];
 	$password = $_SESSION["password"];
-	require_once("include/db_connect.php");
+	require_once("db_connect.php");
 	$db_link = db_connect("majorgroupproject");
 	$self = $_SERVER['PHP_SELF'];
 
 
 	$result = @mysql_query("Select *
 	From users
-	WHERE username LIKE '$username'
-	AND password LIKE '$password'");
+	WHERE user_name LIKE '$username'");
 
 	$fields = mysql_list_fields("majorgroupproject","users");
 	$num_cols = mysql_num_fields($fields);
@@ -23,8 +22,8 @@ if(isset($_POST['username']))
 		{
 
 			$query="UPDATE users
-			SET username='$newusername'
-			WHERE username='$username'";
+			SET user_name='$newusername'
+			WHERE user_name='$username'";
 
 			$result = mysql_query($query) or die("SQL query failed");
 			mysql_close($db_link);

@@ -14,19 +14,27 @@
 	<script src="javaScript/bootstrap.js" type="text/javascript"></script>
 	<script src="javaScript/bootstrap.min.js" type="text/javascript"></script>
 	<style> @import "css/style.css";</style>
+
+	<!-- TESTING ANIMATE -->
+	<style> @import "css/animate.css";</style>
+	<!-- TESTING ANIMATE -->
+    <script  src="javaScript/anamations.js" type="text/javascript"></script>
 </head>
 <body>
-
+<div class="animated fadeInDownBig" id="nav">
     <?php include 'include/headerLOGIN.php';?>
-
-<center style="margin-top: 90px;">
-<h1>Score</h1>
-<?php include 'include/score.php';?>
-<p>Total Score = <?php echo $score ?></p>
-<p>Total questions right = <?php echo $questionsright ?></p>
-<p>Total questions wrong = <?php echo $questionswrong ?></p>
-<p>Click <a href="userHome.php">here</a> to go back to main menu</p>
-
-</center>
+</div>
+<div class="container" id="container">
+    <center style="margin-top: 90px;">
+        <h1 class="animated bounce">Level Reached</h1>
+        <?php include 'include/score.php';?>
+        <div class="animated fadeInLeft">
+            <p>Total Score = <?php echo $score ?></p>
+            <p>Total questions right = <?php echo $questionsright ?></p>
+            <p>Total questions wrong = <?php echo $questionswrong ?></p>
+            <p onclick="transition('userHome.php')">Click <a onclick="transition('userHome.php')">here</a> to go back to main menu</p>
+        </div>
+    </center>
+</div>
 </body>
 </html>

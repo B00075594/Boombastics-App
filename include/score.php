@@ -1,13 +1,12 @@
 <?php
-	$username = $_SESSION["username"];
-	require_once("include/db_connect.php");
+	$username = $_SESSION["user_name"];
+	require_once("db_connect.php");
 	$db_link = db_connect("majorgroupproject");
 	$self = $_SERVER['PHP_SELF'];
 
-
 	$result = @mysql_query("Select *
 	From users
-	WHERE username LIKE '$username'");
+	WHERE user_name LIKE '$username'");
 
 	$fields = mysql_list_fields("majorgroupproject","users");
 	$num_cols = mysql_num_fields($fields);

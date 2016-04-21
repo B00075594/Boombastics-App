@@ -43,6 +43,7 @@
                     <input type="reset" value="Reset">
                 </div>
             </form>
+            <a href="index.php">Back to Login Page</a>
         </div>
     </center>
 </div>

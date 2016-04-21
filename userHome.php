@@ -17,30 +17,31 @@
 	<!-- TESTING ANIMATE -->
 	<style> @import "css/animate.css";</style>
 	<!-- TESTING ANIMATE -->
+
 </head>
 <body>
-<div class="animated fadeInDownBig">
+<div class="animated fadeInDownBig" id="nav">
     <?php include 'include/headerLOGIN.php';?>
 
 	<?php include 'include/speak.php';?>
 </div>
-<div class="container">
+<div class="container" id="container">
 	<center style="margin-top: 10px;">
 		<div id="button_container">
             <img src="images/icon.png" class="animated flip" id="user-default" width="200px">
 
             <h1 class="animated bounce">Main Menu</h1>
             <div class="animated fadeInLeft">
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='index.php?logout';">
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('index.php?logout')">
                     Logout
                 </button>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='score.php';">
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('score.php')">
                     Score
                 </button>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='quiz.php';">
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('quiz.php')">
                     Quiz
                 </button>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='settings.php';">
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('settings.php')">
                     Settings
                 </button>
             </div>
@@ -50,7 +51,8 @@
     		<input type="button" onclick="window.location.href='score.php';" class="btn btn-default" id="button_size" value="Score">
     		<br>
     		<input type="button" onclick="window.location.href='quiz.php';" class="btn btn-default" id="button_size" value="Quiz">
-    		<input type="button" onclick="window.location.href='settings.php';" class="btn btn-default" id="button_size" value="Settings">-->
+    		<input type="button" onclick="window.location.href='settings.php';" class="btn btn-default" id="button_size" value="Settings">
+    	-->
     </center>
 </div>
 </body>

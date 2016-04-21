@@ -10,8 +10,8 @@ label,a{
 a:hover {
     color: white;
     text-decoration: none;
-
 }
+
 img{
 	margin-top: 60px;
 }
@@ -24,6 +24,7 @@ br{
 	margin-top:10px;
 	background-color:#C3C3E5;
 }
+
 input[type="submit"], input[type="reset"]{
 	margin-top:10px;
 	font-weight: bold;
@@ -35,6 +36,7 @@ input[type="submit"], input[type="reset"]{
   	cursor: pointer;
   	color:white;
 }
+
 #move{
 	margin-top: 60px;
 }
@@ -52,7 +54,12 @@ input[type="submit"], input[type="reset"]{
 
 .dg-question-option{
 	text-align: left;
-	padding: 1em;
+	padding: 0.5em;
+	border-bottom: 1px solid black;
+}
+
+.dg-question-option label{
+	margin-left:10px;
 }
 
 #questions{
@@ -63,7 +70,19 @@ input[type="submit"], input[type="reset"]{
 	box-shadow: 10px 10px 5px #888888;
 }
 
-#error{
-	color:red;
-	font-weight: bold;
+#result{
+	padding: 1em;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 10px 10px 5px #888888;
 }
+
+.dg-answer-button-container{
+	padding: 1em;
+}
+
+.wrongUserInput{
+	font-weight: bold;
+	color: red;
+}
+

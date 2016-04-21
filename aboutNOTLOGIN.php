@@ -34,6 +34,11 @@
 			mentored by the top educators in the country.
 		</p>
 
+        <center>
+            <img src="images/people/CompanyPhoto.png" class="img-responsive" width="500">
+        </center>
+
+<h2>The Team</h2>
 		<div class="animated fadeInLeft">
 			<div class="p_left">
 				<img width="161" height="161" src="images/people/ryan.jpg" class="right" alt="pic of member ryan"/>

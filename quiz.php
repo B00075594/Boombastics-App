@@ -40,17 +40,17 @@
 
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        if($row['score'] == 1){
+                        if($row['score'] == 0){
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level1.php\';"> Level 1 </button>');
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level2.php\';" disabled> Level 2 </button>');
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level3.php\';" disabled> Level 3 </button>');
                         }
-                        else if($row['score'] == 2){
+                        else if($row['score'] == 1){
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level1.php\';"> Level 1 </button>');
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level2.php\';"> Level 2 </button>');
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level3.php\';" disabled> Level 3 </button>');
                         }
-                        else if($row['score'] == 3){
+                        else if($row['score'] == 2){
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level1.php\';"> Level 1 </button>');
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level2.php\';"> Level 2 </button>');
                             echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href=\'levels/level3.php\';"> Level 3 </button>');

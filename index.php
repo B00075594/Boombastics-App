@@ -57,7 +57,7 @@ error_reporting(E_ALL);
                     // the user is logged in. you can do whatever you want here.
                     // for demonstration purposes, we simply show the "you are logged in" view.
                     // include("views/logged_in.php");
-                    die("<script>location.href = 'userHome.php'</script>");
+                    header('Location: userHome.php');
                     // include("userHome.php");
                     $user_name = $_SESSION['user_name'];
 

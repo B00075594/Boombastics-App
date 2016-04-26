@@ -42,7 +42,7 @@
 				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('lang.php')">
 					Change Languages
 				</button>
-				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('userHome.php')">
+				<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('userHome.php')" style="margin-bottom: 20px;">
 					Main Menu
 				</button>
 			</div>

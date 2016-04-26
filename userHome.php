@@ -41,18 +41,11 @@
                 <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('quiz.php')">
                     Quiz
                 </button>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('settings.php')">
+                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition('settings.php')" style="margin-bottom: 20px;">
                     Settings
                 </button>
             </div>
 		</div>
-		<!--
-    		<input type="button" onclick="window.location.href='index.php?logout';" class="btn btn-default" id="button_size" value="Logout">
-    		<input type="button" onclick="window.location.href='score.php';" class="btn btn-default" id="button_size" value="Score">
-    		<br>
-    		<input type="button" onclick="window.location.href='quiz.php';" class="btn btn-default" id="button_size" value="Quiz">
-    		<input type="button" onclick="window.location.href='settings.php';" class="btn btn-default" id="button_size" value="Settings">
-    	-->
     </center>
 </div>
 </body>

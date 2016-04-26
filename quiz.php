@@ -28,49 +28,44 @@
 	<div class="container" id="container">
 		<center style="margin-top: 90px;">
 
-        <div id="button_container">
-            <h1 class="animated bounce">Quiz</h1>
-            <div class="animated fadeInLeft">
-                <?php
+            <div id="button_container">
+                <h1 class="animated bounce">Quiz</h1>
+                <div class="animated fadeInLeft">
+                    <?php
 
-                $username = $_SESSION['user_name'];
+                    $username = $_SESSION['user_name'];
 
-                $sql = "SELECT score FROM users WHERE user_name = '$username' ";
-                $result = $dbc->query($sql);
+                    $sql = "SELECT score FROM users WHERE user_name = '$username' ";
+                    $result = $dbc->query($sql);
 
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        if($row['score'] == 0){
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level1.php\')"> Level 1 </button>');
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level2.php\')" disabled> Level 2 </button>');
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level3.php\')" disabled> Level 3 </button>');
-                        }
-                        else if($row['score'] == 1){
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level1.php\')"> Level 1 </button>');
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level2.php\')"> Level 2 </button>');
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level3.php\')" disabled> Level 3 </button>');
-                        }
-                        else if($row['score'] == 1){
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level1.php\')"> Level 1 </button>');
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level2.php\')"> Level 2 </button>');
-                            echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level3.php\')"> Level 3 </button>');
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            if($row['score'] == 1){
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level1.php\')"> Level 1 </button>');
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level2.php\')" disabled> Level 2 </button>');
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level3.php\')" style="margin-bottom: 20px;" disabled> Level 3 </button>');
+                            }
+                            else if($row['score'] == 2){
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level1.php\')"> Level 1 </button>');
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level2.php\')"> Level 2 </button>');
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level3.php\')" style="margin-bottom: 20px;" disabled> Level 3 </button>');
+                            }
+                            else if($row['score'] == 3){
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level1.php\')"> Level 1 </button>');
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level2.php\')"> Level 2 </button>');
+                                echo('<button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="transition(\'levels/level3.php\')" style="margin-bottom: 20px;"> Level 3 </button>');
+                            }
                         }
                     }
-                }
 
-                $dbc->close();
-                ?>
-                <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='userHome.php';">
-                    Main Menu
-                </button>
+                    $dbc->close();
+                    ?>
+                    <button type = "button" class = "btn btn-primary btn-lg btn-block" id="button_color" onclick="window.location.href='userHome.php';">
+                        Main Menu
+                    </button>
+                </div>
+
             </div>
-
-        </div>
-		<!--<input type="button" onclick="window.location.href='levels/level1.php';" class="btn btn-default" id ="button_size" value="Level 1">
-		<input type="button" onclick="window.location.href='level2.php';" class="btn btn-default" id ="button_size" value="Level 2" disabled>
-		<br>
-		<input type="button" onclick="window.location.href='level3.php';" class="btn btn-default" id ="button_size" value="Level 3" disabled>
-		<input type="button" onclick="window.location.href='userHome.php';" class="btn btn-default" id ="button_size" value="Main Menu">-->
 
 		</center>
 	</div>

@@ -37,23 +37,23 @@ class Registration
     private function registerNewUser()
     {
         if (empty($_POST['user_name'])) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Empty Username</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Empty Username</div>';
         } elseif (empty($_POST['user_password_new']) || empty($_POST['user_password_repeat'])) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Empty Password</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Empty Password</div>';
         } elseif ($_POST['user_password_new'] !== $_POST['user_password_repeat']) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Password and password repeat are not the same</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Password and password repeat are not the same</div>';
         } elseif (strlen($_POST['user_password_new']) < 6) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Password has a minimum length of 6 characters</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Password has a minimum length of 6 characters</div>';
         } elseif (strlen($_POST['user_name']) > 64 || strlen($_POST['user_name']) < 2) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Username cannot be shorter than 2 or longer than 64 characters</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Username cannot be shorter than 2 or longer than 64 characters</div>';
         } elseif (!preg_match('/^[a-z\d]{2,64}$/i', $_POST['user_name'])) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Username does not fit the name scheme: only a-Z and numbers are allowed, 2 to 64 characters</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Username does not fit the name scheme: only a-Z and numbers are allowed, 2 to 64 characters</div>';
         } elseif (empty($_POST['user_email'])) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Email cannot be empty</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Email cannot be empty</div>';
         } elseif (strlen($_POST['user_email']) > 64) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Email cannot be longer than 64 characters</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Email cannot be longer than 64 characters</div>';
         } elseif (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Your email address is not in a valid email format</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Your email address is not in a valid email format</div>';
         } elseif (!empty($_POST['user_name'])
             && strlen($_POST['user_name']) <= 64
             && strlen($_POST['user_name']) >= 2
@@ -91,7 +91,7 @@ class Registration
                 $query_check_user_name = $this->db_connection->query($sql);
 
                 if ($query_check_user_name->num_rows == 1) {
-                    $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Sorry, that username / email address is already taken.</div>';
+                    $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Sorry, that username / email address is already taken.</div>';
                 } else {
                     // write new user's data into database
                     $sql = "INSERT INTO users (user_name, user_password_hash, user_email)
@@ -100,16 +100,16 @@ class Registration
 
                     // if user has been added successfully
                     if ($query_new_user_insert) {
-                        $this->messages[] = '<div class="alert alert-success" style="margin-top:10px;"><strong>Success!!!</strong> Your account has been created successfully. You can now log in.</div>';
+                        $this->messages[] = '<div class="alert alert-success" id="shadow" style="margin-top:30px;"><strong>Success!!</strong> Your account has been created successfully. You can now log in.</div>';
                     } else {
-                        $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Sorry, your registration failed. Please go back and try again.</div>';
+                        $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Sorry, your registration failed. Please go back and try again.</div>';
                     }
                 }
             } else {
-                $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> Sorry, no database connection.</div>';
+                $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> Sorry, no database connection.</div>';
             }
         } else {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:70px;"><strong>Error!!!</strong> An unknown error occurred.</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:30px;"><strong>Error!!</strong> An unknown error occurred.</div>';
         }
     }
 

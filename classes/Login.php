@@ -46,9 +46,9 @@ class Login
     {
         // check login form contents
         if (empty($_POST['user_name'])) {
-            $this->errors[] = '<div class=\"alert alert-danger\" style=\"margin-top:10px;\"><strong>Error!!!</strong> Username field was empty.</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:10px;"><strong>Error!!</strong> Username field was empty.</div>';
         } elseif (empty($_POST['user_password'])) {
-            $this->errors[] = '<div class="alert alert-danger" style="margin-top:10px;"><strong>Error!!!</strong> Password field was empty.</div>';
+            $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:10px;"><strong>Error!!</strong> Password field was empty.</div>';
         } elseif (!empty($_POST['user_name']) && !empty($_POST['user_password'])) {
 
             // create a database connection, using the constants from config/db.php (which we loaded in index.php)
@@ -89,13 +89,13 @@ class Login
                         $_SESSION['user_login_status'] = 1;
 
                     } else {
-                        $this->errors[] = '<div class="alert alert-danger" style="margin-top:10px;"><strong>Error!!!</strong> Wrong password. Try again.</div>';
+                        $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:10px;"><strong>Error!!</strong> Wrong password. Try again.</div>';
                     }
                 } else {
-                    $this->errors[] = '<div class="alert alert-danger" style="margin-top:10px;"><strong>Error!!!</strong> This user does not exist.</div>';
+                    $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:10px;"><strong>Error!!</strong> This user does not exist.</div>';
                 }
             } else {
-                $this->errors[] = '<div class="alert alert-danger" style="margin-top:10px;"><strong>Error!!!</strong> Database connection problem.</div>';
+                $this->errors[] = '<div class="alert alert-danger" id="shadow" style="margin-top:10px;"><strong>Error!!</strong> Database connection problem.</div>';
             }
         }
     }
@@ -109,7 +109,7 @@ class Login
         $_SESSION = array();
         session_destroy();
         // return a little feeedback message
-        $this->messages[] = '<div class="alert alert-success" style="margin-top:10px;"><strong>Success!!!</strong> You have been logged out.</div>';
+        $this->messages[] = '<div class="alert alert-success" id="shadow" style="margin-top:10px;"><strong>Success!!</strong> You have been logged out.</div>';
 
     }
 

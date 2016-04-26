@@ -24,7 +24,7 @@
 	<?php include 'include/header.php';?>
 </div>
 <div class="container">
-	<div style="margin-top: 60px;text-align: center;">
+	<div style="margin-top: 70px;text-align: center;">
 		<h1 class="animated bounce">About</h1>
 
 		<p>

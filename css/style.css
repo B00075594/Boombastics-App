@@ -224,3 +224,7 @@ html body div.container img#user-default.img-responsive{
 	padding-top: 60px
 
 }
+
+#shadow{
+	box-shadow: 10px 10px 5px #888888;
+}

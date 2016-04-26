@@ -18,7 +18,7 @@
     <!-- TESTING ANIMATE -->
 </head>
 <body>
-<div class="animated fadeInDownBig">
+<div class="animated fadeInDownBig" style="z-index: 99; position: relative;">
     <?php include 'include/header.php';?>
 </div>
 <div class="container">

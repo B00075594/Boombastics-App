@@ -23,8 +23,6 @@
 
 <h1>Contact</h1>
 
-<p>You can get in touch with us by emailing us at example@example.com</p>
-
 	<!-- Do not change the code! -->
 	<a id="foxyform_embed_link_769550" href="http://www.foxyform.com/">foxyform</a>
 	<script type="text/javascript">

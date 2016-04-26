@@ -22,8 +22,9 @@
     <style> @import "css/style.css";</style>
 </head>
 <body>
-
+<div style="z-index: 99; position: relative;">
 <?php include 'include/header.php';?>
+</div>
 <div class="container" style='margin-top: 80px;'>
     <p>
         Welcome to the ReBoot&#169; Boombastics&#8482; (&#8220;us&#8221;, &#8220;we&#8221;, or &#8220;our&#8221;) website (&#8220;Site&#8221; or &#8220;our

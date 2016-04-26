@@ -21,7 +21,7 @@
     <script  src="javaScript/anamations.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="animated fadeInDownBig" id="nav">
+<div class="animated fadeInDownBig" id="nav" style="z-index: 99; position: relative;">
     <?php include 'include/headerLOGIN.php';?>
 </div>
 <div class="container" id="container">

@@ -20,7 +20,7 @@
 	<!-- TESTING ANIMATE -->
 </head>
 <body class="special_layout">
-<div class="animated fadeInDownBig">
+<div class="animated fadeInDownBig" style="z-index: 99; position: relative;">
 	<?php include 'include/header.php';?>
 </div>
 <div class="container">

@@ -16,9 +16,9 @@
 	<style> @import "css/style.css";</style>
 </head>
 <body>
-
+<div style="z-index: 99; position: relative;">
     <?php include 'include/header.php';?>
-
+</div>
 <center style="margin-top: 90px;">
 
 <h1>Contact</h1>

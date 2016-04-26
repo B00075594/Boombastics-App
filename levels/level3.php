@@ -5,7 +5,7 @@
 <head>
 	<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Level 1</title>
+	<title>Level 3</title>
 
 	<link rel="icon" type="../image/ico" href="images/icon.png">
 	<style> @import "../css/bootstrap.css";</style>
@@ -67,14 +67,10 @@
 <div class="container">
     <center style="margin-top: 50px;">
         <div class="container">
-
-            <div id="output">
-            <div id="questions"></div>
-            <div id="error"></div>
-            <div id="result"></div>
+                <h1>Under Construction</h1>
+                <h3>This page is still being developed!<br> Check back later for updates.</h3>
             </div>
 
-            <script type="text/javascript" src="level1config.js"></script>
     </center>
 </div>
 </body>

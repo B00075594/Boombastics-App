@@ -1,4 +1,4 @@
-<?php 
+<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -10,11 +10,17 @@ error_reporting(E_ALL);
                 // create a login object. when this object is created, it will do all login/logout stuff automatically
                 // so this single line handles the entire login process. in consequence, you can simply ...
                 $login = new Login();
+
+				$cookieName = "ReBootNetworking";
+				if(!isset($_COOKIE[$cookieName])){
+				setcookie("$cookieName", 1, time() + (86400 * 30), "/");
+				}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+
 	<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
@@ -30,6 +36,14 @@ error_reporting(E_ALL);
     <!-- TESTING ANIMATE -->
     <style> @import "css/animate.css";</style>
     <!-- TESTING ANIMATE -->
+
+	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+	<script type="text/javascript">
+		window.cookieconsent_options = {"message":"This application uses cookies to ensure you get the best experience throughout our application.","dismiss":"Sure Thing!","learnMore":"More Info.","link":null,"theme":"light-floating"};
+	</script>
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+	<!-- End Cookie Consent plugin -->
 
 </head>
 <body>

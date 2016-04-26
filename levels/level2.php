@@ -5,7 +5,7 @@
 <head>
 	<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Level 1</title>
+	<title>Level 2</title>
 
 	<link rel="icon" type="../image/ico" href="images/icon.png">
 	<style> @import "../css/bootstrap.css";</style>
@@ -74,7 +74,7 @@
             <div id="result"></div>
             </div>
 
-            <script type="text/javascript" src="level1config.js"></script>
+            <script type="text/javascript" src="level2config.js"></script>
     </center>
 </div>
 </body>

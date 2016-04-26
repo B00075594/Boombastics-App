@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['username']))
 {
-	$username = $_SESSION["username"];
+	$username = $_SESSION["user_name"];
 	$newusername = $_POST['newusername'];
 	$password = $_SESSION["password"];
 	require_once("db_connect.php");
@@ -11,7 +11,7 @@ if(isset($_POST['username']))
 
 	$result = @mysql_query("Select *
 	From users
-	WHERE user_name LIKE '$username'");
+	WHERE user_name = '$username'");
 
 	$fields = mysql_list_fields("majorgroupproject","users");
 	$num_cols = mysql_num_fields($fields);

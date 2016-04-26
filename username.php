@@ -32,10 +32,10 @@
         <?php include 'include/username.php';?>
 
         <form action="<?php echo($_SERVER['PHP_SELF']); ?>" method="POST">
-            <label for="password" style="width:130px">Current Username</label>
+            <label for="username" style="width:130px">Current Username</label>
             <input type="text" name="username">
             <br>
-            <label for="password" style="width:122px">New Username</label>
+            <label for="newusername" style="width:122px">New Username</label>
             <input type="text" name="newusername">
             <br>
             <div id="space">

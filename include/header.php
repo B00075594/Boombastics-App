@@ -9,7 +9,7 @@ echo '<nav class="navbar navbar-default navbar-fixed-top" style="background-colo
                 echo '<span class="icon-bar"></span>';
                 echo '<span class="icon-bar"></span>';
             echo '</button>';
-            echo '<h1 id="title">Reboot Networking</h1>';
+            echo '<h1 id="title">ReBoot Networking</h1>';
             echo '</div>';
 
             echo '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">';

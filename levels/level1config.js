@@ -10,13 +10,25 @@ function showScore() {
 
     document.id('result').adopt(el);
 
-    el = new Element('h4');
-    el.set('html', 'Score: ' + score.numCorrectAnswers + ' of ' + score.numQuestions);
-    document.id('result').adopt(el);
+   var e2 = new Element('h4');
+    e2.set('html', 'Score: ' + score.numCorrectAnswers + ' of ' + score.numQuestions);
 
-    if(score.incorrectAnswers.length > 0) { 5
-        el = new Element('h4');
-        el.set('html', 'Incorrect answers:');
+    document.id('result').adopt(e2);
+
+    if(score.numCorrectAnswers == 10){
+        document.cookie = "ReBootNetworking=2; path=/";
+       var e3 = new Element('h4');
+        e3.set('html', 'Good Work! <img src="/../images/win.png">');
+
+        document.id('result').adopt(e3);
+    }
+    else{
+        document.cookie = "ReBootNetworking=1; path=/";
+    }
+
+
+    if(score.incorrectAnswers.length > 0) {
+        el.set('html', 'Give it another go!<img src="/../images/loss.png"><br>Incorrect answers:');
         document.id('result').adopt(el);
 
         for(var i=0;i<score.incorrectAnswers.length;i++) {
@@ -29,10 +41,13 @@ function showScore() {
             el.set('html', '<div class="wrongUserInput">' + incorrectAnswer.userAnswer);
             document.id('result').adopt(el);
             e1 = new Element('br');
-
         }
+
         e1.set('html', 'To move on you need to answer ', score.incorrectAnswers, ' correctly');
     }
+    var e4 = new Element('h4');
+    e4.set('html', '<a href="../../quiz.php">Back to Quiz...</a>');
+    document.id('result').adopt(e4);
 }
 
 var questions = [
@@ -62,7 +77,7 @@ var questions = [
     },
     {
         label : 'Which statement is true regarding the user exec and privileged exec mode?',
-        options : ['They both require the enable password ','The ? only works in Privileged exec', 'User exec is a subset of the privileged exec','They are identical' ],
+        options : ['They both require the enable password ','The ? only wo rks in Privileged exec', 'User exec is a subset of the privileged exec','They are identical' ],
         answer : ['User exec is a subset of the privileged exec'],
         forceAnswer : true
     },
@@ -100,12 +115,14 @@ var questions = [
 ]
 
 function showAnswerAlert() {
-    document.id('error').set('html', 'You have to answer before you continue to the next question');
+    alert("You have to answer before you continue to the next question");
 }
+
 function clearErrorBox() {
     document.id('error').set('html','');
 }
 var quizMaker = new DG.QuizMaker({
+
     questions : questions,
     el : 'questions',
     forceCorrectAnswer:false,

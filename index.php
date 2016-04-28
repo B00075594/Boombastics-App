@@ -23,8 +23,8 @@ error_reporting(E_ALL);
 
 	<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login</title>
-
+	<title>Boombastics</title>
+	<link rel="apple-touch-icon" href="images/iconIphone.png" />
 	<link rel="icon" type="image/ico" href="images/icon.png">
 	<style> @import "css/bootstrap.css";</style>
 	<style> @import "css/bootstrap.min.css";</style>
@@ -71,7 +71,7 @@ error_reporting(E_ALL);
                     // the user is logged in. you can do whatever you want here.
                     // for demonstration purposes, we simply show the "you are logged in" view.
                     // include("views/logged_in.php");
-                    header('Location: userHome.php');
+                    die("<script>location.href = 'userHome.php'</script>");
                     // include("userHome.php");
                     $user_name = $_SESSION['user_name'];
 

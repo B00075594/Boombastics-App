@@ -1,3 +1,19 @@
+<?php
+// show potential errors / feedback (from registration object)
+if (isset($registration)) {
+    if ($registration->errors) {
+        foreach ($registration->errors as $error) {
+            echo $error;
+        }
+    }
+    if ($registration->messages) {
+        foreach ($registration->messages as $message) {
+            echo $message;
+        }
+    }
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -24,23 +40,6 @@
 <div class="container">
     <div style="margin-top: 70px;text-align: center;">
         <h1 class="animated bounce">Sign Up</h1>
-
-        <?php
-        // show potential errors / feedback (from registration object)
-        if (isset($registration)) {
-            if ($registration->errors) {
-                foreach ($registration->errors as $error) {
-                    echo $error;
-                }
-            }
-            if ($registration->messages) {
-                foreach ($registration->messages as $message) {
-                    echo $message;
-                }
-            }
-        }
-        ?>
-
         <div class="animated fadeInLeft">
             <!-- register form -->
             <form method="post" action="register.php" name="registerform">
